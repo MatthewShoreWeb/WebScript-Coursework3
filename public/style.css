@@ -20,7 +20,7 @@ h1{
 }
 
 /*Unattended Display CSS */
-.summaryItem{
+#projectSummary{
   text-align:center;
   font-size: 3vh;
   margin: auto;
@@ -57,24 +57,18 @@ main{
 main > #displayOptions > p, main > #information > p, #displayOptions > select, #displayOptions > input, #displayOptions > img{
   font-size: 2vh;
   font-weight: bold;
-  margin-left: 20%;
+  margin-left: auto;
 
 }
 #gitHubText{
   color: red;
-}
-#htmlText{
-  color: gold;
-}
-#cssText{
-  color: pink;
 }
 img{
   height: 25px;
   width: 25px;
 }
 
-/* Display Options CSS */
+/* Display information and project information CSS: */
 #fontInformation, #colourInformation, #sizeInformation, #projectHelp{
   display: none;
   margin: auto;
@@ -82,8 +76,16 @@ img{
   font-weight: bold;
 }
 
-/* Project Options CSS */
-
+#information, #projectOptions , #displayOptions{
+  text-align: center;
+  font-size: 3vh;
+  font-weight: bold;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+#projectHelp{
+  font-size: 70%;
+}
 #dayDeadline, #monthDeadline, #yearDeadline{
   width: 30px;
 }

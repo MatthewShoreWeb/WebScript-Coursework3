@@ -46,43 +46,49 @@
           to improve the accessibility of the application. There is also a button which enables the user to edit the content of the unattended display from this control panel.
          Finally, there is a button which takes you to the unattended display in a new tab.</p>
 
-         <p> Please click these links to confirm the <a id='htmlText' target="_blank" href='https://validator.w3.org/'>HTML</a> & <a id='cssText' target="_blank" href='https://jigsaw.w3.org/css-validator/'>CSS</a> validate. </p>
+         <p> Through out the application you will see <img src='questionImg.png' alt='Help Icon'/> icons. Clicking on these icons will prompt text to appear on the screen providing information
+           about how to use that specific part of the application. Clicking the image again will remove the help information. </p>
 
          <p> Here is the link to the GitHub repository: <a id='gitHubText' target="_blank" href='https://github.com/MatthewShoreWeb/WebScript-Coursework3'>Visit GitHub</a>. </p>
 
-         <p> Thankyou for taking the time to review my project. -UP879148 </p>
+         <p> Thankyou for taking the time to review my project. - UP879148 </p>
      </div> <!-- End of information text container -->
 
      <div id='displayOptions'> <!-- Container for the display options (default display:none) -->
       <!-- Drop down box for changing the font style of the website: -->
-       <p> Website Font: </p>
-       <select id='fontSelection'>
-         <option selected="selected" value='courier'>Courier</option>
-         <option value='verdana'>Verdana</option>
-         <option value='arial'>Arial</option>
-         <option value='calibri'>Calibri</option>
-         <option value='helvitica'>Helvitica</option>
-       </select>
-       <img id='fontHelp' src='questionImg.png' alt='Help Icon'/>
 
-      <!-- Drop down box for changing the website colour scheme: -->
-     <p> Website Colour Scheme: </p>
-       <select id='colourSelection'>
-         <option value='default' selected="selected">Default</option>
-         <option value='grey'>Grey</option>
-         <option value='pink'>Pink</option>
-         <option value='blue'>Blue</option>
-       </select>
-       <img id='colourHelp' src='questionImg.png' alt='Help Icon'/>
+       <form action='/styleInfo' method='post'>
+         <p> Website Font: </p>
+         <select id='fontSelection' name='fontSelect'>
+           <option selected="selected" value='courier'>Courier</option>
+           <option value='consolas'>Consolas</option>
+           <option value='arial'>Arial</option>
+           <option value='calibri'>Calibri</option>
+           <option value='helvitica'>Helvitica</option>
+         </select>
+         <img id='fontHelp' src='questionImg.png' alt='Help Icon'/>
 
-       <p> Website Font Scaling: </p>
-        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-        <img id='sizeHelp' src='questionImg.png' alt='Help Icon'/>
+        <!-- Drop down box for changing the website colour scheme: -->
+       <p> Website Colour Scheme: </p>
+         <select id='colourSelection' name='colourSelect'>
+           <option value='default' selected="selected">Default</option>
+           <option value='grey'>Grey</option>
+           <option value='pink'>Pink</option>
+           <option value='blue'>Blue</option>
+           <option value='university'>University</option>
+         </select>
+         <img id='colourHelp' src='questionImg.png' alt='Help Icon'/>
 
+         <!-- Slider bar for changing font size: -->
+         <p> Website Font Scaling: </p>
+          <input type="range" min="50" max="150" value="100" class="slider" id="fontRange">
+          <img id='sizeHelp' src='questionImg.png' alt='Help Icon'/>
+          <button id='displaySubmitBtn' type="submit">Submit</button>
+      </form>
       <div id='helpInformation'>
 
         <p id='fontInformation'> You can choose which font you would like the application to
-           use by selecting one of the web-safe fonts from the drop down menu. This feature was added to improve <thead>
+           use by selecting one of the web-safe fonts from the drop down menu. This feature was added to improve
              accessibility/usability of the application. </p>
 
         <p id='colourInformation'> You can choose the colour-scheme of the application by selecing one of the pre-set schemes
@@ -94,19 +100,18 @@
       the slider to the left to decrease the font size. </p>
 
       </div>
-
-
    </div> <!-- End of display options container -->
 
    <div id='projectOptions'> <!-- Container for the project options (default display:none) -->
-     <p>Project Name:</p> <input id='projectName' type='text' name="pName" maxlength="60"/>
-     <p>Project Client:</p> <input id='projectClient' type='text' name="pClient" maxlength="60"/>
-     <p>Team Members:</p> <input id='teamMembers'  type='text' name="teamMembers" maxlength="140"/>
-     <p>Project Deadline (dd/mm/yyyy):</p> <input id='dayDeadline' type='text' name="dayDeadline" maxlength="2"/><input id='monthDeadline' type='text' name="monthDeadline" maxlength="2"/><input id='yearDeadline' type='text' name="yearDeadline" maxlength="4"/>
-     <p> Project Languages:</p> <input id='projectLanguages' type='text' name="pLanguages" maxlength="60"/>
-     <button id='submitBtn' type="button">Submit</button>
-     <img id='displayHelp' src='questionImg.png' alt='Help Icon'/>
-
+     <form action='/projectInfo' method='post'>
+       <p>Project Name:</p> <input id='projectName' type='text' name="pName" maxlength="60"/>
+       <p>Project Client:</p> <input id='projectClient' type='text' name="pClient" maxlength="60"/>
+       <p>Team Members:</p> <input id='teamMembers'  type='text' name="teamMembers" maxlength="140"/>
+       <p>Project Deadline (dd/mm/yyyy):</p> <input id='dayDeadline' type='text' name="dayDeadline" maxlength="2"/><input id='monthDeadline' type='text' name="monthDeadline" maxlength="2"/><input id='yearDeadline' type='text' name="yearDeadline" maxlength="4"/>
+       <p> Project Languages:</p> <input id='projectLanguages' type='text' name="pLanguages" maxlength="60"/>
+       <button id='submitBtn' type="submit">Submit</button>
+       <img id='displayHelp' src='questionImg.png' alt='Help Icon'/>
+     </form>
      <div id='projectHelp'>
        <p> Here you can enter the information which you would like to send to the unattended display.
          Below is a guide to inputting valid input. </p>
@@ -117,7 +122,7 @@
       <p> Project Languages: "Any valid string" Max length 60 characters.</p>
 
       <p> When you have entered your information click the submit button to send the information
-        to the unattended display. Note: all input fields must be full/valid to send the information. </p>
+        to the unattended display. Note: The submit button is only enabled when valid input is entered. </p>
      </div>
 
    </div> <!-- End of project options container -->
@@ -125,15 +130,8 @@
 
     </main>
 
-
-    <!-- Script to load up JQuery. -->
-    <script
-           src="http://code.jquery.com/jquery-3.3.1.min.js"
-           integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-           crossorigin="anonymous"></script>
-
-    <!-- Main Script to load after JQuery. -->
-           <script src="script.js"></script>
+    <!-- Main script to load. -->
+    <script src="script.js"></script>
 
 
   </body>

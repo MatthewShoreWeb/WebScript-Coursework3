@@ -1,118 +1,178 @@
 'use strict';
-$('#displayOptions').hide();
-$('#projectOptions').hide();
+
+//Hides two divs for editing display/project:
+document.querySelector('#displayOptions').style.display = 'none';
+document.querySelector('#projectOptions').style.display = 'none';
 
 //Colour scheme arrays:
-//Array format: Header, Nav, Body, Font
-const defaultScheme = ['#FFCF79', 'green', 'lightgreen', 'white'];
-const greyScheme = ['lightgrey', 'black', 'grey', 'red'];
-const redScheme = ['pink', 'purple', 'pink', 'black'];
-const blueScheme = ['lightblue', 'blue', 'lightblue', 'black'];
+//Array format: [Header, Nav, Body]
+const defaultScheme = ['#FFCF79', 'green', 'lightgreen'];
+const greyScheme = ['lightgrey', 'black', 'grey'];
+const pinkScheme = ['pink', 'purple', 'pink'];
+const blueScheme = ['lightblue', 'blue', 'lightblue'];
+const university = ['#5B33A2', '#3C023C', 'white'];
 
 
-// Buttons script to change what is displayed to the user:
-$('#informationButton').click(function(){
-  $('#displayOptions').hide();
-  $('#projectOptions').hide();
-  $('#information').show();
+//Buttons to change what is displayed to the user:
+//Displays the program information:
+document.querySelector('#informationButton').addEventListener('click', function(){
+  document.querySelector('#displayOptions').style.display = 'none';
+  document.querySelector('#projectOptions').style.display = 'none';
+  document.querySelector('#information').style.display = 'block';
 });
 
-$('#displayOptionsButton').click(function(){
-  $('#information').hide();
-  $('#projectOptions').hide();
-  $('#displayOptions').show();
+//Displays options for changing GUI settings:
+document.querySelector('#displayOptionsButton').addEventListener('click', function(){
+  document.querySelector('#information').style.display = 'none';
+  document.querySelector('#projectOptions').style.display = 'none';
+  document.querySelector('#displayOptions').style.display = 'block';
 });
 
-$('#projectOptionsButton').click(function(){
-  $('#information').hide();
-  $('#displayOptions').hide();
-  $('#projectOptions').show();
+//Displays options for entering project information:
+document.querySelector('#projectOptionsButton').addEventListener('click', function(){
+  document.querySelector('#information').style.display = 'none';
+  document.querySelector('#displayOptions').style.display = 'none';
+  document.querySelector('#projectOptions').style.display = 'block';
 });
 
-$('#displayProjectButton').click(function(){
+//Opens, in a new tab, the unattended display:
+document.querySelector('#displayProjectButton').addEventListener('click', function(){
   window.open('index.html');
 });
 
-//Script to change the font via drop down box:
-$('#fontSelection').change(function(){
-   $('body').css("font-family", $('#fontSelection').val());
+
+//Changes the font via drop down box:
+document.querySelector('#fontSelection').addEventListener('change', function(){
+  let fontSelection = document.querySelector('#fontSelection').value;
+  document.querySelector('body').style.fontFamily = fontSelection;
 });
 
-//Script to change the colour scheme via drop down box:
-$('#colourSelection').change(function(){
-
-  if($('#colourSelection').val() == 'grey'){
-    $('header').css("background-color", greyScheme[0]);
-    $('nav').css("background-color", greyScheme[1]);
-    $('body').css("background-color", greyScheme[2]);
-  } else if($('#colourSelection').val() == 'pink'){
-    $('header').css("background-color", redScheme[0]);
-    $('nav').css("background-color", redScheme[1]);
-    $('body').css("background-color", redScheme[2]);
-  } else if($('#colourSelection').val() == 'blue'){
-    $('header').css("background-color", blueScheme[0]);
-    $('nav').css("background-color", blueScheme[1]);
-    $('body').css("background-color", blueScheme[2]);
-  } else {
-    $('header').css("background-color", defaultScheme[0]);
-    $('nav').css("background-color", defaultScheme[1]);
-    $('body').css("background-color", defaultScheme[2]);
+//Changes the colour scheme via drop down box:
+document.querySelector('#colourSelection').addEventListener('change', function(){
+  let currentArray = defaultScheme
+  let currentSelection = document.querySelector('#colourSelection').value;
+  if(currentSelection == 'grey'){
+    currentArray = greyScheme
+  } else if(currentSelection == 'pink'){
+    currentArray = pinkScheme
+  } else if(currentSelection == 'blue'){
+    currentArray = blueScheme
+  } else if(currentSelection == 'university') {
+    currentArray = university;
   }
-
+  document.querySelector('header').style.backgroundColor = currentArray[0];
+  document.querySelector('nav').style.backgroundColor = currentArray[1];
+  document.querySelector('body').style.backgroundColor = currentArray[2];
 });
+
+//Script to change the font size via a slider:
+document.querySelector('#fontRange').addEventListener('input', function(){
+  let sliderValue = document.querySelector('#fontRange').value;
+  document.querySelector('header').style.fontSize = sliderValue/40 + 'vh';
+  document.querySelector('nav').style.fontSize = sliderValue/50 + 'vh';
+  document.querySelector('div').style.fontSize = sliderValue/50 + 'vh';
+});
+
 
 //Event listeners for hovering over help buttons:
-//Font help button hover:
-$('#fontHelp').hover(function(){
-  $('#fontInformation').show();
-}, function(){
-  $('#fontInformation').hide();
+//Font help button click event:
+document.querySelector('#fontHelp').addEventListener('click', function(){
+  let fontInformation = document.querySelector('#fontInformation');
+  fontInformation.style.display === 'block' ? fontInformation.style.display = 'none' : fontInformation.style.display = 'block';
 });
 
-//Colour help button hover:
-$('#colourHelp').hover(function(){
-  $('#sizeInformation').show();
-}, function(){
-  $('#sizeInformation').hide();
+//Colour help button click event:
+document.querySelector('#colourHelp').addEventListener('click', function(){
+  let colourInformation = document.querySelector('#colourInformation');
+  colourInformation.style.display === 'block' ? colourInformation.style.display = 'none' : colourInformation.style.display = 'block';
 });
 
-//Size help button hover:
-$('#sizeHelp').hover(function(){
-  $('#sizeInformation').show();
-}, function(){
-  $('#sizeInformation').hide();
+//Size help button click event:
+document.querySelector('#sizeHelp').addEventListener('click', function(){
+  let sizeInformation = document.querySelector('#sizeInformation');
+  sizeInformation.style.display === 'block' ? sizeInformation.style.display = 'none' : sizeInformation.style.display = 'block';
 });
 
-//Project help button hover
-$('#displayHelp').hover(function(){
-  $('#projectHelp').show();
-}, function(){
-  $('#projectHelp').hide();
+//Project help button click event:
+document.querySelector('#displayHelp').addEventListener('click', function(){
+  let projectHelp = document.querySelector('#projectHelp');
+  projectHelp.style.display === 'block' ? projectHelp.style.display = 'none' : projectHelp.style.display = 'block';
+});
+
+//Validation for submitting project information:
+let nameInput = document.querySelector('#projectName').value;
+let clientInput = document.querySelector('#projectClient').value;
+let teamInput = document.querySelector('#teamMembers').value;
+let dayInput = document.querySelector('#dayDeadline').value;
+let monthInput = document.querySelector('#monthDeadline').value;
+let yearInput = document.querySelector('#yearDeadline').value;
+let languageInput = document.querySelector('#projectLanguages').value;
+
+document.getElementsByName('input').addEventListener('input', function(){
+  console.log('hello');
 });
 
 
-//Script to recieve the information:
-$('#submitBtn').click(function(){
-  //Variables to recieve the user input:
-  let pName = $('#projectName').val();
-  let pClient = $('#projectClient').val();
-  let teamMembers = $('#teamMembers').val();
-  let deadLine = $('#dayDeadline').val() + '/' + $('#monthDeadline').val() + '/' + $('#yearDeadline').val();
-  let pLanguages = $('#projectLanguages').val();
-  userInputValidation(pName, pClient, teamMembers, deadLine, pLanguages);
-  let dataObject = JSON.parse({"pName":pName, "pClient":pClient, "teamMembers": teamMembers, "deadLine": deadLine, "pLanguages": pLanguages});
-  alert(JSON.stringify(dataObject));
+document.querySelector('#submitBtn').addEventListener('click', function(){
+  window.open('settings.html');
 });
 
-//Function to ensure the user enters valid information:
-function userInputValidation(pName, pClient, tMembers, dInput, pLanguages){
-  //Checks existance of input first:
-  if(pName == '' || pClient == '' || tMembers == '' || dInput == '' || pLanguages == ''){
-    alert('undefined');
-    //Validates the dates, ensures numerical input:
-  } else if(isNaN($('#dayDeadline').val()) || isNaN($('#monthDeadline').val()) || isNaN($('#yearDeadline').val())){
-      alert('Dates must contain only integer values.');
-    } else if($('#dayDeadline').val() > 31 || $('#monthDeadline').val() > 12 || $('#yearDeadline').val() < 2019 || $('#yearDeadline').val() > 2035){
-      alert('input error');
-  }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
