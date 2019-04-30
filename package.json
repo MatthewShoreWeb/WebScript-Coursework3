@@ -1,0 +1,15 @@
+{
+  "name": "program-team-information",
+  "version": "1.0.0",
+  "description": "A program to show information about a project to a team of programmers.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "UP879148",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3"
+  }
+}
