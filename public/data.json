@@ -1,1 +1,5 @@
-{"pName":"Test Name","pClient":"Test Client","teamMembers":"One, Two, Three","deadLine":"12/05/2019","pLanguages":"Java python JavaScript "}
+{
+  "projectInfo": ["Name", "Client", "Members", "Deadline", "Languages"],
+  "projectStyle": ["arial"],
+  "projectMessages": ["Message One", "Message Two", "Message Three"]
+}

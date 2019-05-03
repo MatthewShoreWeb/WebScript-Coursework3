@@ -1,8 +1,8 @@
 'use strict';
 const express = require('express');
 const fs = require('fs');
-const app = express();
 const bodyParser = require('body-parser');
+const app = express();
 
 //Tells server to use the public folder:
 app.use(express.static('public'));
@@ -47,6 +47,6 @@ app.post('/styleInfo', function(req, res){
   };
   console.log('Sent style data:');
   console.log(req.body);
-  writeToFile('./public/style.json', JSON.stringify(styleInformation));
+  writeToFile('./public/style.json', JSON.parse(styleInformation));
   res.send('Data sent:' + JSON.stringify(styleInformation));
 });

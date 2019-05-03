@@ -1,1 +1,6 @@
 {"fontSelect":"courier","colourSelect":"pink"}
+
+{
+  "projectInfo": ["Name", "Client", "Members", "Deadline", "Languages"],
+  "projectStyle": ["Courier"]
+}

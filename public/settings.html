@@ -82,11 +82,16 @@
          <!-- Slider bar for changing font size: -->
          <p> Website Font Scaling: </p>
           <input type="range" min="50" max="150" value="100" class="slider" id="fontRange">
-          <img id='sizeHelp' src='questionImg.png' alt='Help Icon'/>
-          <button id='displaySubmitBtn' type="submit">Submit</button>
-      </form>
-      <div id='helpInformation'>
+          <img id='sizeHelp' src='questionImg.png' alt='Help Icon'/><br/>
 
+        <!-- Input for changing the rate at which messages are displayed: -->
+        <p> Message display rate: </p>
+        <input id='messageRateInput' maxlength="2" min="5" max="60" type='number'/><span id='secondsTxt'>seconds between messages.</span>
+        <img id='messageRefreshHelp' src='questionImg.png' alt='Help Icon'/><br>
+        <button id='displaySubmitBtn' type="submit">Submit</button>
+      </form>
+
+      <div id='helpInformation'> <!-- Container for the display help text (default display:none) -->
         <p id='fontInformation'> You can choose which font you would like the application to
            use by selecting one of the web-safe fonts from the drop down menu. This feature was added to improve
              accessibility/usability of the application. </p>
@@ -98,8 +103,7 @@
         <p id='sizeInformation'> You can use the slider to choose the size of the website font. This can make the website easier to read,
         improving the overall accessibility/usability of the application. Move the slider to the right to increase the font size and move
       the slider to the left to decrease the font size. </p>
-
-      </div>
+      </div> <!-- End of display help container. -->
    </div> <!-- End of display options container -->
 
    <div id='projectOptions'> <!-- Container for the project options (default display:none) -->
@@ -108,18 +112,19 @@
        <p>Project Client:</p> <input id='projectClient' type='text' name="pClient" maxlength="60"/>
        <p>Team Members:</p> <input id='teamMembers'  type='text' name="teamMembers" maxlength="140"/>
        <p>Project Deadline (dd/mm/yyyy):</p> <input id='dayDeadline' type='text' name="dayDeadline" maxlength="2"/><input id='monthDeadline' type='text' name="monthDeadline" maxlength="2"/><input id='yearDeadline' type='text' name="yearDeadline" maxlength="4"/>
-       <p> Project Languages:</p> <input id='projectLanguages' type='text' name="pLanguages" maxlength="60"/>
+       <p> Project Languages:</p> <input id='projectLanguages' type='text' name="pLanguages" maxlength="60"/><br/>
        <button id='submitBtn' type="submit">Submit</button>
        <img id='displayHelp' src='questionImg.png' alt='Help Icon'/>
      </form>
-     <div id='projectHelp'>
+
+     <div id='projectHelp'> <!-- Container for the project help text (default display:none) -->
        <p> Here you can enter the information which you would like to send to the unattended display.
          Below is a guide to inputting valid input. </p>
-      <p> Project Name: "Any valid string" Max length 60 characters.</p>
-      <p> Project Client: "Any valid string" Max length 60 characters.</p>
-      <p> Project Members: "Any valid string" Max length 140 characters.</p>
-      <p> Project Name: Standard date format: dd/mm/yyyy cannot exceed days per month or month per year. </p>
-      <p> Project Languages: "Any valid string" Max length 60 characters.</p>
+      <p> Project Name: <span class='validInputColour'>"Any valid string" Max length 60 characters.</span></p>
+      <p> Project Client: <span class='validInputColour'>"Any valid string" Max length 60 characters.</span></p>
+      <p> Project Members: <span class='validInputColour'>"Any valid string" Max length 140 characters.</span></p>
+      <p> Project Name: <span class='validInputColour'>Standard date format: dd/mm/yyyy cannot exceed days per month or month per year.</span></p>
+      <p> Project Languages: <span class='validInputColour'>"Any valid string" Max length 60 characters.</span></p>
 
       <p> When you have entered your information click the submit button to send the information
         to the unattended display. Note: The submit button is only enabled when valid input is entered. </p>
