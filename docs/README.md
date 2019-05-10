@@ -11,11 +11,11 @@ How to use the program:
 
 #### Program Navigation:
 
-##### The program has four basic components:
--Default Information: This is the default text information that describes the application to the user.
--Display Options: Here the user can edit style options for the unattended display.
--Project Options: Here you can edit the project information to be displayed on the unattended display.
--Message Options: Here you can edit the message information to be displayed on the unattended display.
+#### The program has four basic components:
+**Default Information: This is the default text information that describes the application to the user.
+**Display Options: Here the user can edit style options for the unattended display.
+**Project Options: Here you can edit the project information to be displayed on the unattended display.
+**Message Options: Here you can edit the message information to be displayed on the unattended display.
 
 Additional Information
 ----------------------
