@@ -19,9 +19,11 @@ AJAX is also a technology which I had previously not really used that much. Prev
 
 ### Javascript development:
 
-This coursework has helped my Javascript improve a lot. 
+This coursework has helped my Javascript improve a lot. I tried to make my Javascript code as efficient as it could possibly be. Example of how I attempted to do this would include:
+1. Ternary Operator, I used a ternary operator for each one of my help buttons. This method of conditional programming was great as it allowed me to get simple if statements down to a single line of code, improving the overall efficiency of my program.
+2. Functions, while this may seem obvious I did use many functions to avoid repeated code. Examples of this include the code for displaying different containers when buttons on the navigation bar is clicked and also in the code for the changing of colour schemes.
 
-
+My knowledge of using Javascript to manipulate DOM elements also increased significantly during the span of this coursework. Throughout this application I take full advantage of hiding and showing DOM elements to display relevant information to the user when they click a particular input. I found this to be great as prior to this coursework I would have multiple HTML pages for this task. 
 
 ### CSS development:
 
