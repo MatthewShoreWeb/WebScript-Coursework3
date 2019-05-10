@@ -32,3 +32,5 @@ Additional Information
 The program has been designed to be accessible for a wide audience, you can adjust components of the system such as the font-size, font-type, and colour scheme. The idea behind these is to allow for people with visual impairments to be able to use the system better.
 
 In addition to this there are help icons beside each component of the system to explain to the user what each component does and provides sample input for the user as an example of what to enter.
+
+All pages validate fully. The HTML and CSS have been testing using W3Validator and the JS has been tested on several online validators to ensure quality.
