@@ -35,3 +35,14 @@ This coursework allowed me to improve the quality of my CSS from previous projec
 In this program I took care to consider usability. For every event in the program there is a help icon which, when pressed, will display to the user information about how to use a particular component of the application. This I feel will be very useful if the user gets stuck.
 
 Another usability consideration that was made was to disable all buttons for input until the user has entered a valid input. Meaning that the user cannot even press the button until they have entered a valid input. This provides a very clear way for the user to get feedback on their input in essentially real time. If they ever get stuck they can also click one of the help icons mentioned above.
+
+
+
+### Accessibility Improvements/Considerations:
+
+In this program there are several accessibility considerations which the user can take advantage of if they desire:
+1. The user is able to change the font of the unattended display. This is useful if the user finds a particular font hard to read or if they simply prefer another font.
+2. The user can change the colour scheme of the application, this is great for users who might find a particular colour scheme harder to read or if they simply prefer another colour scheme. All colour schemes have had colour blindness taken into account when they were chosen.
+3. The user can take advantage of the slider which will change the size of the text on the unattended display. This is good for people who may find the font too big or too small or simply have difficulty reading a particular size of font. It also gives the user more choice.
+
+
