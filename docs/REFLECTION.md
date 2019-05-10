@@ -12,11 +12,6 @@ This coursework I learned a lot about implementing POST and GET requests in Node
 
 AJAX is also a technology which I had previously not really used that much. Previously, I had use location.reload() to reload an entire web page, however, using AJAX has improved the quality of my system by enabling background refresh. A couple of improvements that I could have made to my system however, would have been to only execute the AJAX requests when a POST button is pressed (to eliminate the need for a refresh rate) and to have used AJAX for post requests to prevent the page redirecting. However, due to limited time I was unable to implement these two features.
 
-
-### HTML development:
-
-
-
 ### Javascript development:
 
 This coursework has helped my Javascript improve a lot. I tried to make my Javascript code as efficient as it could possibly be. Example of how I attempted to do this would include:
@@ -53,3 +48,5 @@ In this program there are several accessibility considerations which the user ca
 2. I decided to have two Javascript files. One for the Unattended Display and another for the Settings Page. The reasoning behind this is to seperate the code for each component of the system. This will make maintaining each component much easier as a programmer can easily isolate the two sections of code from eachother as they are in different files.
 3. I also decided to put all of my documentation inside of a "docs" folder. This is so that it is easily accessible to someone wishing to find and read it.
 4. I decided to put all of my program files within a "public" folder. The reason for this is because it makes them easier to find for someone wanting to access them. Also it means in my server I can tell the server to simply server all the files inside of the public folder in one line.
+
+## Conclusion
