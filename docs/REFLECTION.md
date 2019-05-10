@@ -50,3 +50,5 @@ In this program there are several accessibility considerations which the user ca
 4. I decided to put all of my program files within a "public" folder. The reason for this is because it makes them easier to find for someone wanting to access them. Also it means in my server I can tell the server to simply server all the files inside of the public folder in one line.
 
 ## Conclusion
+
+Overall, I have learnt a significant amount from undertaking this coursework. It has taught me a significant amount about both client-side and server-side programming. It has made me think more about how I layout and design the a system as well as made technologys such as Node JS and AJAX a lot clearer to me than they were previously. Overall, this has been a great development oppertunity for me in web programming.
