@@ -23,7 +23,7 @@ The validation for entering project information and message information is fully
 Unattended Display:
 -----------------------
 
-The unattended display can be accessed by going to https://localhost:8080. The display will show the project information and the messages alternating.
+The unattended display can be accessed by going to localhost:8080. The display will show the project information and the messages alternating.
 
 
 Additional Information
