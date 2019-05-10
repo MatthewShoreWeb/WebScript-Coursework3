@@ -20,6 +20,10 @@ All of these components can be accessed by clicking the relevant component of th
 
 The validation for entering project information and message information is fully automatic. This means that the buttons to submit the data to the server will only become enabled if the user has entered correct information.
 
+Unattended Display:
+-----------------------
+
+The unattended display can be accessed by going to https://localhost:8080. The display will show the project information and the messages alternating.
 
 
 Additional Information
