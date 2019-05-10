@@ -2,6 +2,9 @@
 
 ### Node JS:
 
+1. Express: I decided to use the express module for my application because it means that creating a HTTP server in Node JS was significantly easier. It also made simplifying the handling of post requests easier.
+2. Body-Parser: I decided to user the body parser module also for my application. All this application does is act as middleware to format data into the specified format (JSON). This makes the system simpler and easier to understand.
+3. File System: I used the Node File System module in my application in order to read and write to the JSON file. This is how the user data would be updated.
 
 ### POST and GET requests:
 
