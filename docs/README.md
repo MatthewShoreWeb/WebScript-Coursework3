@@ -14,9 +14,11 @@ How to use the program:
 2. Display Options: Here the user can edit style options for the unattended display.
 3. Project Options: Here you can edit the project information to be displayed on the unattended display.
 4. Message Options: Here you can edit the message information to be displayed on the unattended display.
-5. Show Display: This will show the unattended display.
+5. Show Display: This will show the unattended display in a new tab.
 
 All of these components can be accessed by clicking the relevant component of the navigation bar at the top of the page. With the exception, however, of the message options which must be accessed via going to "Project Options" and clicking on the messages button. You can then return to "Project Options" by clicking the "Back" button.
+
+The validation for entering project information and message information is fully automatic. This means that the buttons to submit the data to the server will only become enabled if the user has entered correct information.
 
 
 
