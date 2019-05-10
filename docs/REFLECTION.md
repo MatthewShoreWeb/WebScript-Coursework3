@@ -1,7 +1,4 @@
-# Reflection File
-
-Summary of what I have learnt:
------------------------------
+# UP879148 Reflection 
 
 ### Node JS:
 
@@ -36,7 +33,7 @@ In this program I took care to consider usability. For every event in the progra
 
 Another usability consideration that was made was to disable all buttons for input until the user has entered a valid input. Meaning that the user cannot even press the button until they have entered a valid input. This provides a very clear way for the user to get feedback on their input in essentially real time. If they ever get stuck they can also click one of the help icons mentioned above.
 
-
+The program is also 100% scalable and works on all mobile and desktop devices. This is true for both the settings page and the unattened display. This allows the application to be used by a more diverse audience and gives the user choice as to how they wish to use the application.
 
 ### Accessibility Improvements/Considerations:
 
