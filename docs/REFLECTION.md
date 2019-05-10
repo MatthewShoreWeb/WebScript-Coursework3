@@ -42,4 +42,9 @@ In this program there are several accessibility considerations which the user ca
 2. The user can change the colour scheme of the application, this is great for users who might find a particular colour scheme harder to read or if they simply prefer another colour scheme. All colour schemes have had colour blindness taken into account when they were chosen.
 3. The user can take advantage of the slider which will change the size of the text on the unattended display. This is good for people who may find the font too big or too small or simply have difficulty reading a particular size of font. It also gives the user more choice.
 
+## File Design:
 
+1. For my application I decided to have a single JSON file in which to store all of my information about my unattended display. The reasoning behind this is because it is a reasonably easy way to implement a database. The reason I wanted a permenant store of data which can be changed by the user is incase there is a network failure for example, all of the users data and choices will not be lost.
+2. I decided to have two Javascript files. One for the Unattended Display and another for the Settings Page. The reasoning behind this is to seperate the code for each component of the system. This will make maintaining each component much easier as a programmer can easily isolate the two sections of code from eachother as they are in different files.
+3. I also decided to put all of my documentation inside of a "docs" folder. This is so that it is easily accessible to someone wishing to find and read it.
+4. I decided to put all of my program files within a "public" folder. The reason for this is because it makes them easier to find for someone wanting to access them. Also it means in my server I can tell the server to simply server all the files inside of the public folder in one line.
